@@ -77,10 +77,13 @@ drive.mount('/content/drive')
 ### 3. Copy dataset into the project folder
 
 ```python
-%cd /content/cv_project
-!rm -rf /content/cv_project/datasets/ReplicaReID
-!mkdir -p /content/cv_project/datasets
-!cp -r "/content/drive/MyDrive/datasets/ReplicaReID" /content/cv_project/datasets/
+!pip install gdown
+
+!gdown --id 1Nq7jFR9wqJPzd2n9qO1Rxf945hs4gVOF -O ReplicaReID.zip
+
+!unzip ReplicaReID.zip
+
+!mv ReplicaReID /content/cv_project/datasets/
 ```
 
 ### 4. Install requirements
